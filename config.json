@@ -1,0 +1,48 @@
+{
+  "embedding": {
+    "model": "text-embedding-3-small",
+    "batch_size": 100,
+    "max_retries": 3,
+    "timeout": 30
+  },
+  "chunking": {
+    "max_chunk_size": 1500,
+    "chunk_overlap": 300,
+    "use_semantic_chunking": true,
+    "min_chunk_size": 150
+  },
+  "retrieval": {
+    "tfidf_ngram_range": [1, 2],
+    "tfidf_max_features": null,
+    "bm25_k1": 1.2,
+    "bm25_b": 0.75,
+    "hybrid_alpha": 0.5,
+    "faiss_index_type": "IndexFlatIP"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "max_tokens": 2048,
+    "max_context_chunks": 10
+  },
+  "cache": {
+    "embedding_cache_size": 10000,
+    "query_cache_size": 1000,
+    "cache_ttl": 3600,
+    "enable_disk_cache": true,
+    "cache_dir": "cache"
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "log_to_file": true,
+    "log_file": "rag_system.log",
+    "max_file_size": 10485760,
+    "backup_count": 5
+  },
+  "data_dir": "data",
+  "results_dir": "results",
+  "questions_dir": "questions",
+  "answers_dir": "answers"
+}
