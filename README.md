@@ -2,7 +2,7 @@
   <img src="RAGonRAG_Logo.png" alt="RAGonRAG Logo" width="400"/>
 </div>
 
-# RAGonRAG - Production-Ready RAG System
+# RAGonRAG
 
 A Retrieval-Augmented Generation (RAG) system with advanced caching, hybrid retrieval, and comprehensive monitoring capabilities. The knowledge base is derived from transcripts of lectures from the DeepLearning.AI course on RAG.
 
